@@ -19,21 +19,18 @@ public class UserController {
         int month = time.get(Calendar.MONTH) + 1;
         int year = time.get(Calendar.YEAR);
 
-//        System.out.println("The current time is \t" + hour + ":" + min);
-//        System.out.println("Today's date is \t" + month + "/" + day + "/"
-//                + year);
+        System.out.println("The current time is \t" + hour + ":" + min);
+        System.out.println("Today's date is \t" + month + "/" + day + "/"
+                + year);
 
         if (hour < 12)
-            return "Good Morning!" + name;
+            return "Time : "+hour+":"+min+"\nGood Morning!" + name;
         else if (hour < 17 && !(hour == 12))
-            return "Good afternoon!" + name;
+             return "Time : "+hour+":"+min+"\nGood afternoon!" + name;
         else if (hour == 12)
-            return "Good noon!" + name;
+             return "Time : "+hour+":"+min+"\nGood noon!" + name;
         else
-            return "Good evening!" + name;
-
+            return "Time : "+hour+":"+min+"\nGood evening!" + name;
 
     }
-
-
 }
